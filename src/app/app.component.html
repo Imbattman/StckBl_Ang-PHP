@@ -1,0 +1,77 @@
+<!-- Toolbar -->
+  <div>
+    <table >
+      <tr>
+        <td style="vertical-align: text-top;background-color: azure;">
+    <h1>Meses</h1>
+       <table border="1" style="background-color: rgb(238, 236, 136)">
+        <tr>
+          <td>Nro</td><td>Mes</td><td>C. Días</td>
+        </tr>
+       
+        <tr *ngFor="let m of meses;let i = index">
+          <td>{{m.Nro}} </td>
+          <td>{{m.Mes}}</td>
+          <td>{{m.CDias}}</td>
+        </tr>
+      </table>
+    </td>
+ 
+    <td style="vertical-align: text-top;background-color: azure;">
+      <h1>Sucursales</h1>
+
+      <table border="1" style="background-color: rgb(245, 198, 229)">
+        <tr>
+          <td>Id</td><td>Nombre</td><td>Dirección</td><td>C. Empl</td>
+        </tr>
+        <tr *ngFor="let suc of sucursales;let i=index">
+          <td>{{suc.Id_Suc}}{{i}}</td>
+          <td>{{suc.Nombre_Suc}}</td>
+          <td>{{suc.Dir_Suc}}</td>
+          <td>{{suc.Cant_Emp_Suc}}</td>      
+        </tr>
+        
+      </table>
+    </td>
+    <td style="vertical-align: text-top;background-color: azure;">
+      <h1>Clientes</h1>
+
+      <table border="1" style="background-color: rgb(236, 250, 217);">
+        <tr>
+        <td>Nombre</td><td>Apellido</td><td>Saldo</td><td>Status</td>
+        </tr>
+        <tr *ngFor="let cli of articulos;let i=index">
+          <td>{{cli.codigo}}{{i}}</td>
+          <td>{{cli.descripcion}}</td>
+          <td>{{cli.precio}}</td>
+          <td>{{cli.precio * 1.21}}</td>
+        </tr>
+        
+      </table>
+      
+    </td>
+<td style="vertical-align: text-top; background-color: azure;">
+   <h1>Ventas</h1>
+   
+      <table border="1" style="background-color: rgb(228, 245, 248)">
+        <tr>
+        <td>Suc 1</td><td>Suc 2</td><td>Suc 3</td><td>Suc 4</td><td>Suc 5</td>
+        </tr>
+        <tr *ngFor="let VM of ventas;let i=index">
+          <td >{{VM[0]}}</td>
+          <td >{{VM[1]}}</td>
+          <td >{{VM[2]}}</td>
+          <td >{{VM[3]}}</td>
+          <td >{{VM[4]}}</td>
+          
+        </tr>
+        
+      </table>
+      
+    </td>
+  </tr>
+  </table>
+
+
+
+  </div>
